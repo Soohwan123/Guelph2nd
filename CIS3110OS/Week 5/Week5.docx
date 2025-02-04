@@ -1,0 +1,36 @@
+0     7    2     E
+0000 0111 0010 1110
+
+If it’s 11 bits offset
+
+0000 0|111 0010 1110
+ Page # | position
+   0   0    7  2  E
+
+0X 0072E
+
+
+0 x 1 6 | 7   2    E
+0001 0110 | 111 0010 1110
+
+= 00 | 1011 0111 0010 1110
+          B    7    2    E → Physical Address
+    
+
+
+Text page - > Read Only
+
+
+
+working set  changes over time  resident set ( 중간에 있는게 resident set 의 예시)
+
+
+
+
+
+
+
+f
+
+
+
