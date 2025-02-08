@@ -28,9 +28,102 @@ working set  changes over time  resident set ( 중간에 있는게 resident set 
 
 
 
+Example 3 
+
+7     7        F    F
+0111 0 | 111 1111 1111
+
+     (offset)
 
 
-f
+Page 
+- 0111 0
+→ 0000 1110( 뒤에서 부터 자른다.)
+
+- E   → Page number = 0x0E
+
+→ Page frame = 11
+
+: Read, Write 마다 U (used bit) gets set
+: Write → D(dirty bit) gets set
+
+1      1 | 7    F   F
+0001 0001| 111 1111 1111 
+
+ →       1000 1111 1111 1111
+  	    8    F    F     F  → Physical address
+0x8FFF → Answer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+둘 다 같지만 Page Number 은 CPU 에서 쓰는것. Main Memory 는 메모리를 위한것
+
+
+결국 Offset 이 2048( 이경우에선) 이기 때문에, 2049 에 접근한다면 다음 Physical Address 로 가는게아니라 Main Memory 의 0x12 로 접근하게됨. (virtual)
+
+
+→ 7800
+0111 1000 0000 0000
+→ 0 F → Page number 
+
+→ It’s not allocated. So let’s just allocate to F
+
+→ 1 6
+0001 0
+   
+
+
+
+Belady’s
+
+→ looks ahead of time
+ABCD ABE▽ABCD EBCFBB▽BCDE F
+
+A B C
+     D  → C 가 제일 나중에 또 쓰이기 떄문에 (미리 앞을 봄) C 를 지우고 교환해버림
+
+
+
+→ 수학적으로 제일 완벽 하지만 실제로 구현은 불가능
+
+
+
+LRU 를 주로 사용함. 제일 괜찮.
+
+
+
+
 
 
 
