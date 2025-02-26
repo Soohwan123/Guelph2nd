@@ -1,0 +1,17 @@
+Memory ForkWaitExec
+
+Restudy wait exec
+
+
+If one process calls exit → everything exits
+If one thread calls exit → only that thread exits
+
+
+
+
+.
+
+
+malloc → is literally you initialize the memory in your main thread so it can work as shared_mem in multi process program.
+Critical section needed. Tho.****
+
