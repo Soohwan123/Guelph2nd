@@ -15,3 +15,11 @@ If one thread calls exit → only that thread exits
 malloc → is literally you initialize the memory in your main thread so it can work as shared_mem in multi process program.
 Critical section needed. Tho.****
 
+
+
+
+
+---
+Midterm version A 
+Q3 - 
+
