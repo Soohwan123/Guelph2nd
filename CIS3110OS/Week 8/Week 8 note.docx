@@ -1,0 +1,48 @@
+Clock Algorithm
+
+It is a page replacement algorithm like FIFO
+
+
+Page algorithm-
+Which page we kick out of memory when we need a new page
+
+
+Page Replacement Policy is different
+Tells us how we apply the algorithm across our pages in memory regardless who belong to 
+
+
+Some programs need more pages than others
+-> Variable partition policy is used
+
+
+
+High page fault rate - > probably need more page (memory)
+
+Residence set <-> Working set (could be bigger?)
+
+
+Usually -> allocate a lot of frames(pages) at first and decreases the frames by time until page fault rate gets stable(not high, not low)
+
+
+When System is desperately need memory -> (usually we can just buy memory it's cheaper)
+
+
+
+Usually -> paging -> one frame at a time
+
+Desperation strategy -> swapping( when memory is all used and only small memory is left in the system) -> one process at a time (one program)
+
+
+
+Copy on write - > to save resource
+
+
+37slides
+
+
+38slide
+First , Best , Worst - > it's tough to say Best is always the best cuz sometimes ( like a lot of strings) Worst Fit could be a good choice. And usually First bit is good enough.
+
+
+
+
