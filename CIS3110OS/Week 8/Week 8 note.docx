@@ -1,4 +1,4 @@
-Clock Algorithm
+﻿Clock Algorithm
 
 It is a page replacement algorithm like FIFO
 
@@ -43,6 +43,82 @@ Copy on write - > to save resource
 38slide
 First , Best , Worst - > it's tough to say Best is always the best cuz sometimes ( like a lot of strings) Worst Fit could be a good choice. And usually First bit is good enough.
 
+->
+What people use depends on the data 
+Best bit→ Regular size – graph based data structure(tree etc)→ (works really well)
+
+Worst Fit – Strings (works well)
+
+Knuth Buddy System → Basically Binary search algorithm for memory(Divide hole)
+(Slightly better than others but hard to implement so only Linux uses)
+
+
+
+
+Cache tags → are not software but hardware so you don’t loop thru to find the tag but it just takes it immediately. ( constant time to find tags )
+
+Cache is always smaller than page size
+128bytes
+
+
+
+Memory Hierarchy
+
+L1 → built in the cpu (closest to cpu)(usually associative)
+associative → Hardware parelell search → each one of the cell holds the key
+System on a chip design(m1 m2 chip)
+
+L2 → also built in the cpu but slightly further than L1 (usually direct mapped)
+
+
+process → checks L1 (if miss(no data)) → checks L2 →(if miss(no data)) → checks Memory →….
+
+multi cores => usually every core has L1 
+L2 is shared by all the cpus( so tags should have some indication that tells whose(cpu) data(ram) is this)
+
+
+
+Hierarchical Page Table
+
+41page → 1bits no l bits, m bits, n bits
+
+
+→ don’t get confused. This process only needs one page table. (gpt 해보자)
+f→ frame number
+
+
+f + o => physical address
+
+
+Processes→ needs more work
+threads → less work ( only need stack ) Light weight, Cheaper to create, destroy
+But why don’t we just use threads all the time?
+→ Complicated critical sections (A lot more work for my brain)
+→ Everything is on the same boat(process). So if there’s error in one thread it could cripple all the process. Thus more fragile.
+
+
+I/O
+
+Controller → simple/second computer
+
+There could be two ways handle I/O 
+
+Block access                         vs     unblock access ( keyboard, mouse.etc
+→ use buffer                                one character at a time
+once 4kbyte(random) is filled                more expensive (stutter)
+controller sends it to memory
+and sends one interrupt to cpu
+that tells i/o sends is done
+
+
+
+→ Disk
+z → which cylinder
+r → how close to the excel  
+theta → how far we have to spin
+
+
+SSD 는 원형도 아니고 돌지도 않지만 hdd 가 먼저 나왔기에 SSD 를 읽을때 HDD랑 똑같이 Cylinder, head , sector 을 사용해서 읽는다.
 
 
 
